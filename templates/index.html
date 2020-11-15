@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>MalChecker</title>
+	<link rel="shortcut icon" href="{{ url_for('static', filename="img/m.png")}}"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap.min.css")}}" />
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename="css/owl.carousel.css")}}" />
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename="css/owl.theme.default.css")}}" />
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename="css/magnific-popup.css")}}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename="css/font-awesome.min.css")}}">
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename="css/style.css")}}" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:100,300'>
+	<link rel="stylesheet" href="{{ url_for('static', filename="css/styles.css")}}">
+
+
+</head>
+
+<body>
+
+	<header id="home">
+
+		<div class="bg-img" style="background-image: url('{{ url_for('static', filename="./img/main.jpg")}}');">
+			<div class="overlay"></div>
+		</div>
+		<nav id="nav" class="navbar nav-transparent">
+			<div class="container">
+
+				<div class="navbar-header">
+					<div class="navbar-brand">
+						<br>
+						<a href="index.html">
+							<h3 style="color:black;" class="logo">MalChecker</h3>
+							<h3 style="color:white;" class="logo-alt">MalChecker</h3>
+						</a>
+					</div>
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+				</div>
+
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#features">About Project</a></li>
+					<li><a href="#team">About Me</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="home-wrapper">
+			<div class="container">
+				<div class="row">
+
+    <center><br><br><br><div class="upload">
+			<form action = "/uploader" method = "POST" enctype = "multipart/form-data" id="myFile" >
+				 <div class="upload-files">
+					<header>
+					 <p>
+						<i class="fa fa-cloud-upload" aria-hidden="true"></i>
+						<span class="up">up</span>
+						<span class="load">load</span>
+					</p>
+					</header>
+					<div class="body" id="drop">
+					 <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
+					 <p class="pointer-none"><b>Drag and drop</b> files here <br /> or <a href="" id="triggerFile">browse</a> to begin the upload</p>
+							<input type = "file" name = "file"  multiple="multiple" />
+					</div>
+					<footer>
+					 <div class="divider">
+						<span><AR>EXCUTABLE FILE</AR></span>
+					 </div>
+					 <div class="list-files">
+					 </div>
+							<button class="importar">Start Detection</button>
+					</footer>
+				 </div>
+			 </form>
+    </div></center>
+
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="features" class="section md-padding bg-grey">
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6">
+					<div class="section-header">
+						<h2 class="title">About My Project</h2>
+					</div>
+					<p>It is a web application that classifies the files as malicious or non-malicious with the help of machine learning.<br></p>
+					<div class="feature">
+						<i class="fa fa-check"></i>
+						<p>It tries out various classification algorithms which is used for prediction and comparing the results.</p>
+					</div>
+					<div class="feature">
+						<i class="fa fa-check"></i>
+						<p>Classification algorithms that are tried are RandomForest, DecisionTree, Adaboost, Gaussian and Gradient Boosting.</p>
+					</div>
+					<div class="feature">
+						<i class="fa fa-check"></i>
+						<p>In order to test the model for file, it's required to extract the characteristics of the given file.</p>
+					</div>
+					<div class="feature">
+						<i class="fa fa-check"></i>
+						<p>ML model is used to predict the class for the given file based on the already trained model.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<br>
+					<div id="about-slider" class="owl-carousel owl-theme">
+						<img class="img-responsive" align="right" src="{{ url_for('static', filename="./img/01.png")}}" alt="">
+						<img class="img-responsive" align="right" src="{{ url_for('static', filename="./img/2.png")}}" alt="">
+						<img class="img-responsive" align="right" src="{{ url_for('static', filename="./img/3.png")}}" alt="">
+						<img class="img-responsive" align="right" src="{{ url_for('static', filename="./img/4.png")}}" alt="">
+						<img class="img-responsive" align="right" src="{{ url_for('static', filename="./img/safe.png")}}" alt="">
+						<img class="img-responsive" align="right" src="{{ url_for('static', filename="./img/b.jpg")}}" alt="">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="numbers" class="section sm-padding">
+
+		<div class="bg-img" style="background-image: url('{{ url_for('static', filename="./img/main2.jpg")}}');">
+			<div class="overlay"></div>
+		</div>
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm-3 col-xs-6">
+					<div class="number">
+						<i class="fa fa-users"></i>
+						<h3 class="white-text"><span class="counter">1</span></h3>
+						<span class="white-text">Team Member</span>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<div class="number">
+						<i class="fa fa-trophy"></i>
+						<h3 class="white-text"><span class="counter">7</span></h3>
+						<span class="white-text">Semester Project</span>
+					</div>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<div class="number">
+						<i class="fa fa-file"></i>
+						<h3 class="white-text"><span class="counter"> 14 Nov. 2020</span></h3>
+						<span class="white-text">Project to submit</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="team" class="section md-padding">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="section-header text-center">
+					<h2 class="title">About Me</h2>
+				</div>
+
+				<div class="col-sm-3">
+					<div class="team">
+						<div class="team-img">
+							<img class="img-responsive" src="{{ url_for('static', filename="./img/varun.jpg")}}" alt="">
+							<div class="overlay">
+
+							</div>
+						</div>
+						<div class="team-content">
+							<h3>Varun Sharma</h3>
+							<span>Developer</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="feature">
+						<i class="fa fa-check"></i>
+						<p>First of all, thanks for using this application. Many more features will be added to this application in future.</p>
+						<i class="fa fa-check"></i>
+						<p> Talking about myself, I am a final year Computer Science Student at Bennett University,India.</p>
+						<i class="fa fa-check"></i>
+						<p>I have interest in ML, cybersecurity and cloud computing. </p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="back-to-top"></div>
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename="js/jquery.min.js")}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename="js/bootstrap.min.js")}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename="js//owl.carousel.min.js")}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename="js/jquery.magnific-popup.js")}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename="js/main.js")}}"></script>
+	<script  src="{{ url_for('static', filename="js/index.js")}}"></script>
+
+</body>
+
+</html>
