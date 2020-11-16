@@ -3,10 +3,9 @@ import array
 import math
 import pickle
 import os
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 import joblib
-from sklearn.ensemble import RandomForestClassifier
 
 def cutit(s,n):
    return s[n:]
